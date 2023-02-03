@@ -1,18 +1,25 @@
-import Header from "./components/header/header"
-import HomePage from "./pages/homePage/HomePage"
+import AOS from 'aos';
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
 
-import { Global, theme } from "./global/GlobalStyle"
-import Banner from "./components/banner/Banner"
+
+import { theme } from "./global/GlobalStyle"
 
 import { ThemeProvider } from 'styled-components'
+import { ContextProvider } from "./context/Provider";
+import InitialProvider from "./provider/Provider";
 
 function App() {
 
+
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, [])
   return (
     <ThemeProvider theme={theme}>
-      <Global />
-      <Header />
-      <HomePage/>
+      <ContextProvider>
+        <InitialProvider />
+      </ContextProvider>
     </ThemeProvider>
   )
 }

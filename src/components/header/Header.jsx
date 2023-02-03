@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { HeaderStyle } from './HeaderStyled'
 import writing from '../../hooks/write';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
@@ -15,12 +16,12 @@ const Header = () => {
             <div className='logo'>
                 <h1>{nameWeb}</h1><h1 className='bar'>|</h1>
             </div>
-            <div className='menu'>
-                <h2>Home</h2>
-                <h2>Blog</h2>
-                <h2>Portfólio</h2>
-                <h2>Sobre mim</h2>
-            </div>
+            <ul className='menu'>
+                <li><NavLink to='/'>Home</NavLink></li>
+                <li>Blog</li>
+                <li>Portfólio</li>
+                <li><NavLink to='/aboutme'>Sobre mim</NavLink></li>
+            </ul>
         </HeaderStyle>
     )
 }

@@ -31,19 +31,21 @@ export const HeaderStyle = styled.div`
     }    
         }
     }
-    
+    .active{
+        border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+    }
     .menu{
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
-        h2{
+        li{
+            font-size: 24px;
+            font-weight: bold;
             border-bottom: 2px solid black;
             border-top: 2px solid black;
             margin-right: 35px;
-        :first-child{
-            border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
-        }
+           
         :hover{
             border-top: 2px solid ${({ theme }) => theme.colors.primary};
         }

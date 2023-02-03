@@ -8,6 +8,7 @@ const HomePage = () => {
     <HomePageStyle>
       <Banner />
       <BoxCard />
+
     </HomePageStyle>
 
   )

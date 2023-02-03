@@ -17,7 +17,6 @@ export const BoxCardStyle = styled.div`
     }
     section{
         display: flex;
-
         p{
             text-indent: 10px;
         }
@@ -25,6 +24,5 @@ export const BoxCardStyle = styled.div`
             width: 300px;
             margin-left: 20px;
         }
- 
     }
 `
