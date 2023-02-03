@@ -1,16 +1,19 @@
 import Header from "./components/header/header"
-import HomePage from "./pages/homePage"
+import HomePage from "./pages/homePage/HomePage"
 
-import { Global } from "./global/GlobalStyle"
+import { Global, theme } from "./global/GlobalStyle"
+import Banner from "./components/banner/Banner"
+
+import { ThemeProvider } from 'styled-components'
 
 function App() {
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Global />
       <Header />
-      <HomePage />
-    </div>
+      <HomePage/>
+    </ThemeProvider>
   )
 }
 
