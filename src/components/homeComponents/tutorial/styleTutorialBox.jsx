@@ -17,4 +17,14 @@ export const TutorialBoxStyle = styled.div`
         color: ${({theme}) => theme.colors.background};
         background-color: ${({ theme }) => theme.colors.white};
     }
+    .divImage{
+        img{
+            width: 50px;
+        }
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 `
