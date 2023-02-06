@@ -5,7 +5,6 @@ export const BoxCardStyle = styled.div`
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: ${({theme}) => theme.colors.background};
-    z-index: 1;
     display: flex;
     justify-content: center;
     .boxInside{

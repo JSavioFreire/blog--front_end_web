@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Header from '../components/header/header'
 import HomePage from '../pages/homePage/HomePage'
 import { Global } from '../global/GlobalStyle'
@@ -8,8 +8,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Context } from '../context/Provider'
 const InitialProvider = () => {
     const { data, loading } = useFetch('http://localhost:3000/tec');
-    const { apiTec, setApiTec } = useContext(Context)
-    setApiTec(data)
+    const { setApiTec, setLoadingApiTec } = useContext(Context);
+
+    useEffect(() => {
+        setApiTec(data);
+        setLoadingApiTec(loading);
+
+    })
+
     return (
         <BrowserRouter>
             <Global />

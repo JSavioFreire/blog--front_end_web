@@ -1,13 +1,19 @@
 import React from 'react'
-import Banner from '../../components/banner/Banner'
-import BoxCard from '../../components/boxCard/BoxCard'
+import Banner from '../../components/homeComponents/banner/Banner'
+import BoxCard from '../../components/homeComponents/boxCard/BoxCard'
+import ChallengersBox from '../../components/homeComponents/challengers/ChallengersBox'
+import TutorialBox from '../../components/homeComponents/tutorial/tutorialBox'
 import { HomePageStyle } from './styleHomePage'
 
 const HomePage = () => {
   return (
     <HomePageStyle>
       <Banner />
-      <BoxCard />
+      <section className='eighty'>
+        <BoxCard />
+        <TutorialBox />
+        <ChallengersBox />
+      </section>
 
     </HomePageStyle>
 

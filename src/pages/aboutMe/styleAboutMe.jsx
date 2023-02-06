@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const StyleAboutMe = styled.div`
     margin-top: 150px;
+    a{
+        margin-left: 20px;
+    }
     .flex{
         display: flex;
         justify-content: space-around;
@@ -18,7 +21,7 @@ export const StyleAboutMe = styled.div`
         text-indent: 20px;
     }
     }
-    img{
+    .myImg{
         width: 500px;
         border-radius: 5px;
         box-shadow: 0px 0px 5px ${({ theme }) => theme.colors.primary};

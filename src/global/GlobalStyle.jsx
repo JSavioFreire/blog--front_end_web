@@ -4,6 +4,7 @@ export const Global = createGlobalStyle`
     body{
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
         color: ${({ theme }) => theme.colors.white};

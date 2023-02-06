@@ -18,8 +18,9 @@ const Header = () => {
             </div>
             <ul className='menu'>
                 <li><NavLink to='/'>Home</NavLink></li>
-                <li>Blog</li>
-                <li>Portfólio</li>
+                <li>Tutoriais</li>
+                <li>Desafios</li>
+                <li>Inspirações</li>
                 <li><NavLink to='/aboutme'>Sobre mim</NavLink></li>
             </ul>
         </HeaderStyle>

@@ -7,7 +7,7 @@ import { theme } from "./global/GlobalStyle"
 
 import { ThemeProvider } from 'styled-components'
 import { ContextProvider } from "./context/Provider";
-import InitialProvider from "./provider/Provider";
+import InitialProvider from "./provider/InitialProvider";
 
 function App() {
 
