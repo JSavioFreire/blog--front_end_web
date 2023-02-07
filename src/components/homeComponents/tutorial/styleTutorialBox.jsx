@@ -33,7 +33,7 @@ export const TutorialBoxStyle = styled.div`
         align-items: center;
         justify-content: space-evenly;
         background-color: ${({ theme }) => theme.colors.background};
-        border-radius: 10px;
+        border-radius: 5px;
         width: 80%;
         padding: 5px;
         color: ${({theme}) => theme.colors.white};
