@@ -5,6 +5,7 @@ export const EachHability = styled.div`
     border: 1px solid white;
     height: 200px;
     border-radius: 5px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

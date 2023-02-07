@@ -4,6 +4,7 @@ import { Context } from '../../../context/Provider';
 
 const TutorialBox = () => {
   const { apiTec, loadingApiTec } = useContext(Context);
+  
   var tecs = apiTec && apiTec.slice(0, 5).map((item, key) => {
     return (
       <div key={key} className='divImage'>
@@ -11,8 +12,6 @@ const TutorialBox = () => {
       </div>
     );
   });
-  console.log(tecs)
-
   return (
     <TutorialBoxStyle>
       <div className='text' data-aos="fade-right">
@@ -22,7 +21,6 @@ const TutorialBox = () => {
         {loadingApiTec && <h1>Carregando</h1>}
         <div className='flex'>
           {apiTec && tecs}
-
         </div>
 
       </div>
