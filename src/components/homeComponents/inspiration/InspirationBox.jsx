@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Context } from '../../../context/Provider'
 import { StyleInspirationBox } from './styleInspirationBox'
 import { AiFillStar } from 'react-icons/ai';
@@ -19,11 +19,11 @@ const InspirationBox = () => {
                 <h4>
                     Quer desenvolver algo diferente com programação mas falta uma ideia de aplicação? Aqui você encontra algumas inspirações.
                 </h4>
-                <div className='row'>
+                <div className='row' >
                     {loadingApiInsp && <p>Carregando</p>}
                     {apiInsp && apiInsp.map((item, key) => {
                         return (
-                            <div className='insp ' style={{ backgroundImage: `url(${item.image})` }} key={key}>
+                            <div className='insp'  data-aos="fade-up" style={{ backgroundImage: `url(${item.image})` }} key={key}>
                                 <div className='text' key={key}>
                                     <h1>{item.title}</h1>
                                     <p>{item.content}</p>
