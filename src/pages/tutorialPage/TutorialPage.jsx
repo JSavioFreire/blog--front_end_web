@@ -4,8 +4,6 @@ import Context from '../../context/Provider.jsx'
 
 const TutorialPage = () => {
 
-  const {}
-
   return (
     <TutorialPageStyle>
       <div className='miniMenu'>
