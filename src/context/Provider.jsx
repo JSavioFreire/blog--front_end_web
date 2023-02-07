@@ -9,8 +9,12 @@ export const ContextProvider = ({ children }) => {
 
     const [apiInsp, setApiInsp] = useState();
     const [loadingApiInsp, setLoadingApiInsp] = useState(true);
+
+    const [apiTutorial, setApiTutorial] = useState();
+    const [loadingApiTutorial, setLoadingApiTutorial] = useState(true);
+
     return (
-        <Context.Provider value={{ apiTec, setApiTec, loadingApiTec, setLoadingApiTec, apiInsp, setApiInsp, loadingApiInsp, setLoadingApiInsp }}>
+        <Context.Provider value={{ apiTec, setApiTec, loadingApiTec, setLoadingApiTec, apiInsp, setApiInsp, loadingApiInsp, setLoadingApiInsp, apiTutorial, setApiTutorial, loadingApiTutorial, setLoadingApiTutorial }}>
             {children}
         </Context.Provider>
     )

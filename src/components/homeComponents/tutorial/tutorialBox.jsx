@@ -3,8 +3,8 @@ import { TutorialBoxStyle } from './styleTutorialBox'
 import { Context } from '../../../context/Provider';
 
 const TutorialBox = () => {
-  const { apiTec, loadingApiTec } = useContext(Context);
-  
+  const { apiTec, loadingApiTec, apiTutorial, loadingApiTutorial } = useContext(Context);
+
   var tecs = apiTec && apiTec.slice(0, 5).map((item, key) => {
     return (
       <div key={key} className='divImage'>
@@ -12,6 +12,15 @@ const TutorialBox = () => {
       </div>
     );
   });
+
+  var tut = apiTutorial && apiTutorial.slice(0, 3).map((item, key) => {
+    return (
+      <div className='eachTutorial' key={key}>
+        <img src={item.tec.image} />
+        <p>{item.title}</p>
+      </div>
+    )
+  })
   return (
     <TutorialBoxStyle>
       <div className='text' data-aos="fade-right">
@@ -26,6 +35,8 @@ const TutorialBox = () => {
       </div>
       <div className='tut' data-aos="fade-left">
         <h1>Tutoriais mais recentes:</h1>
+        {loadingApiTutorial && <p>Carregando</p>}
+        {apiTutorial && tut}
       </div>
     </TutorialBoxStyle>
   );

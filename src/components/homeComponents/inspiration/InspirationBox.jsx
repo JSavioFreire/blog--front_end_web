@@ -15,7 +15,7 @@ const InspirationBox = () => {
     return (
         <StyleInspirationBox>
             <div>
-                <h2>Inspirações</h2>
+                <h2>Desafios e Inspirações</h2>
                 <h4>
                     Quer desenvolver algo diferente com programação mas falta uma ideia de aplicação? Aqui você encontra algumas inspirações.
                 </h4>
@@ -23,7 +23,7 @@ const InspirationBox = () => {
                     {loadingApiInsp && <p>Carregando</p>}
                     {apiInsp && apiInsp.map((item, key) => {
                         return (
-                            <div className='insp'  data-aos="fade-up" style={{ backgroundImage: `url(${item.image})` }} key={key}>
+                            <div className='insp' data-aos="fade-up" style={{ backgroundImage: `url(${item.image})` }} key={key}>
                                 <div className='text' key={key}>
                                     <h1>{item.title}</h1>
                                     <p>{item.content}</p>
