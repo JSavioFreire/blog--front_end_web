@@ -7,6 +7,7 @@ export const StyleInspirationBox = styled.div`
     margin-bottom: 50px;
     .row{
         display: flex;
+        justify-content: space-around;
         .insp{
             cursor: pointer;
             width: 30%;

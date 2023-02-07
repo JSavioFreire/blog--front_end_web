@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { TutorialBoxStyle } from './styleTutorialBox'
 import { Context } from '../../../context/Provider';
+import Skeleton from 'react-loading-skeleton';
 
 const TutorialBox = () => {
   const { apiTec, loadingApiTec, apiTutorial, loadingApiTutorial } = useContext(Context);
@@ -27,7 +28,7 @@ const TutorialBox = () => {
         <h1>Tutoriais:</h1>
         <p>Aqui você encontra tutoriais de vários tópicos, frameworks e linguagens diferentes. </p>
         <h4>Alguns dos tópicos falados aqui.</h4>
-        {loadingApiTec && <h1>Carregando</h1>}
+        {loadingApiTec && <Skeleton height={100} />}
         <div className='flex'>
           {apiTec && tecs}
         </div>
@@ -35,7 +36,7 @@ const TutorialBox = () => {
       </div>
       <div className='tut' data-aos="fade-left">
         <h1>Tutoriais mais recentes:</h1>
-        {loadingApiTutorial && <p>Carregando</p>}
+        {loadingApiTutorial && <div className='tutLoading'><Skeleton height={60} /></div>}
         {apiTutorial && tut}
       </div>
     </TutorialBoxStyle>

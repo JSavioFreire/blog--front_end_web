@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { Context } from '../../../context/Provider'
 import { StyleInspirationBox } from './styleInspirationBox'
 import { AiFillStar } from 'react-icons/ai';
+import Skeleton from 'react-loading-skeleton';
+
 
 const InspirationBox = () => {
     const { apiInsp, loadingApiInsp } = useContext(Context);
@@ -9,6 +11,16 @@ const InspirationBox = () => {
     const diff = (num) => {
         for (let i = 0; i < num; i++) {
             stars.push(<AiFillStar key={i} />)
+        }
+    }
+    let loading = [];
+    const loadingSkeleton = () => {
+        for (let i = 0; i < 3; i++) {
+            loading.push(
+                <div className='insp' data-aos="fade-up">
+                    <Skeleton height={200} />
+                </div>
+            )
         }
     }
 
@@ -20,7 +32,8 @@ const InspirationBox = () => {
                     Quer desenvolver algo diferente com programação mas falta uma ideia de aplicação? Aqui você encontra algumas inspirações.
                 </h4>
                 <div className='row' >
-                    {loadingApiInsp && <p>Carregando</p>}
+                    {loadingSkeleton()}
+                    {loadingApiInsp && loading}
                     {apiInsp && apiInsp.map((item, key) => {
                         return (
                             <div className='insp' data-aos="fade-up" style={{ backgroundImage: `url(${item.image})` }} key={key}>

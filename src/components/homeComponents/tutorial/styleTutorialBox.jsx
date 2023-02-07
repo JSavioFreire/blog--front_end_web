@@ -17,6 +17,11 @@ export const TutorialBoxStyle = styled.div`
         color: ${({ theme }) => theme.colors.background};
         background-color: ${({ theme }) => theme.colors.white};
     }
+    .tutLoading{
+        box-sizing: border-box;
+        width: 80%;
+        border-radius: 5px;
+    }
     .divImage{
         img{
             width: 50px;
