@@ -13,6 +13,14 @@ const InspirationPage = () => {
           return (
             <div key={key}>
               <h3>{item.title}</h3>
+              <div className='little'>
+                <p>{`Tecnologia: ${item.tec.title}`}</p>
+                <p>{`Nivel de dificuldade: ${item.difficult}/5`}</p>
+              </div>
+              <img src={item.image} alt="image" />
+              <p>{item.content}</p>
+              <p>{item.link}</p>
+
 
             </div>
 
